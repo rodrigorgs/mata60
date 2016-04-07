@@ -10,6 +10,8 @@ Para os exercícios a seguir, use uma das seguintes ferramentas online:
 - <https://dbdesigner.net/>
 - <http://vertabelo.com/>
 
+Uma opção de ferramenta desktop multiplataforma é o MySQL Workbench.
+
 ## Farmácia
 
 Tirado do livro de Heuser.
@@ -41,6 +43,6 @@ Se achar necessário, veja também os [requisitos](modelagem).
 
 Projete um modelo lógico para o modelo conceitual a seguir, usando o paradigma relacional.
 
-![]({{ "/images/der-cinema.jpg" | prepend: site.baseurl}})
+![]({{ "/images/der-cinema.png" | prepend: site.baseurl}})
 
 Se achar necessário, veja também os [requisitos](modelagem).
