@@ -35,8 +35,12 @@ Projete um modelo lógico para o modelo conceitual a seguir, usando o paradigma 
 
 ![]({{ "/images/der-campeonato.jpg" | prepend: site.baseurl}})
 
+Se achar necessário, veja também os [requisitos](modelagem).
+
 ## Cinema
 
 Projete um modelo lógico para o modelo conceitual a seguir, usando o paradigma relacional.
 
 ![]({{ "/images/der-cinema.jpg" | prepend: site.baseurl}})
+
+Se achar necessário, veja também os [requisitos](modelagem).
