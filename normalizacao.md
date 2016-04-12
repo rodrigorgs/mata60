@@ -33,3 +33,24 @@ Jura dizer a verdade, somente a verdade, nada mais do que a verdade?
 
 ## 2FN
 
+## Exemplo
+
+<https://twiki.ufba.br/twiki/pub/SUPAC/GradGuiaAreaI/112.html>
+
+```
+Aula (disc, turma, vagas, dia, horario, docente)
+
+== 1 FN ==>
+
+Aula (*cod_disc*, nome_disc, *turma*, vagas, *dia*, *hora_ini*, hora_fim, docente)
+
+== 2 FN ==>
+
+Aula (*cod_disc*, *turma*, *dia*, *hora_ini*, hora_fim, docente)
+Disciplina (*cod_disc*, nome_disc)
+Vagas (*cod_disc*, *turma*, num_vagas)
+
+== 3 FN ==>
+
+(igual)
+```
