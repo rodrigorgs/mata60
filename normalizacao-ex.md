@@ -5,4 +5,6 @@ date:   2016-04-14 13:00:00 -0300
 categories: aula
 ---
 
-Resolver os exercícios disponíveis em <http://www.pedrofcarvalho.com.br/PDF/EXERCICIOS_FORMAS_NORMAIS.pdf>
+Resolver os exercícios disponíveis em <http://www.pedrofcarvalho.com.br/PDF/EXERCICIOS_FORMAS_NORMAIS.pdf> (não precisa montar diagrama entidade-relacionamento e nem dicionário de dados)
+
+<!-- Outro: http://docente.ifrn.edu.br/nickersonferreira/disciplinas/programacao-com-acesso-a-banco-de-dados-3o-ano/lista-de-exercicios-01-normalizacao/view -->
