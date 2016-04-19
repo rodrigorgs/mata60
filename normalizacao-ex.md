@@ -82,6 +82,66 @@ Na tabela AlocacaoProfessor, NomeProfessor depende de CodProfessor, que depende 
 
 Note que adicionamos a restrição de chave estrangeira a AlocacaoProfessor(CodProfessor).
 
+### Outra resposta para a questão 2, com diferentes pressupostos
+
+#### Modelo inicial
+
+Historico(CodUnidade, NomeUnidade, CodCurso, NomeCurso, NomeAluno, Matricula, StatusAluno, CodDisciplina, NomeDisciplina, Professores, Notas, NumFaltas, SituacaoDisciplina, Periodo, CodTurma)
+
+Pressupostos:
+
+- só tem uma turma de cada disciplina para um curso em um determinado período
+
+#### Identificar a chave primária da tabela
+
+Historico(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, CodUnidade, NomeUnidade, NomeCurso, NomeAluno, StatusAluno, NomeDisciplina, Professores, Notas, NumFaltas, SituacaoDisciplina)
+
+#### 1FN
+
+Buscar atributos não-atômicos (i.e., multivalorados ou compostos)
+
+Historico(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, CodUnidade, NomeUnidade, NomeCurso, NomeAluno, StatusAluno, NomeDisciplina, NumFaltas, SituacaoDisciplina)
+
+AlocacaoProfessor(*CodCurso*, *Matricula*, *CodDisciplina*, *CodPeriodo*, CpfProfessor, NomeProfessor)
+
+Nota(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, *NumOrdemNota*, Nota)
+
+#### 2 FN
+
+Buscar atributos que dependem de uma parte da chave.
+
+Nota(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, *NumOrdemNota*, Nota)
+
+AlocacaoProfessor(*CodCurso*, *CodDisciplina*, *CodPeriodo*, CpfProfessor, NomeProfessor)
+
+Historico(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, NumFaltas, SituacaoDisciplina)
+
+Curso(*CodCurso*, CodUnidade, NomeUnidade, NomeCurso)
+
+Matricula(*CodMatricula*, NomeAluno, StatusAluno)
+
+Disciplina(*CodDisciplina*, NomeDisciplina)
+
+#### 3 FN
+
+Buscar atributos que dependem indiretamente da chave.
+
+Curso(*CodCurso*, NomeCurso, CodUnidade)
+
+Unidade(*CodUnidade*, NomeUnidade)
+
+Matricula(*CodMatricula*, NomeAluno, StatusAluno)
+
+Disciplina(*CodDisciplina*, NomeDisciplina)
+
+Nota(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, *NumOrdemNota*, Nota)
+
+AlocacaoProfessor(*CodCurso*, *CodDisciplina*, *CodPeriodo*, CpfProfessor)
+
+Professor(*CpfProfessor*, NomeProfessor)
+
+Historico(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, NumFaltas, SituacaoDisciplina)
+
 ## Exercício 2
 
 Considere o seguinte esquema, baseado em <http://www.cgp.ufba.br/docentes.asp>:
