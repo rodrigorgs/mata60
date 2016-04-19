@@ -102,7 +102,7 @@ Buscar atributos não-atômicos (i.e., multivalorados ou compostos)
 
 Historico(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, CodUnidade, NomeUnidade, NomeCurso, NomeAluno, StatusAluno, NomeDisciplina, NumFaltas, SituacaoDisciplina)
 
-AlocacaoProfessor(*CodCurso*, *Matricula*, *CodDisciplina*, *CodPeriodo*, CpfProfessor, NomeProfessor)
+AlocacaoProfessor(*CodCurso*, *CodDisciplina*, *CodPeriodo*, CpfProfessor, NomeProfessor)
 
 Nota(*CodCurso*, *Matricula*, *CodDisciplina*, *Periodo*, *NumOrdemNota*, Nota)
 
